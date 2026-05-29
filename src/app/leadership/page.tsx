@@ -26,8 +26,18 @@ export default function LeadershipPage() {
               className="flex flex-col rounded-2xl border border-border bg-surface p-8"
             >
               <div className="flex items-start gap-5">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-border-strong bg-background text-lg font-semibold text-heading">
-                  {l.initials}
+                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-border-strong bg-background">
+                  {l.photo ? (
+                    <img
+                      src={l.photo}
+                      alt={l.name}
+                      className="h-full w-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center text-lg font-semibold text-heading">
+                      {l.initials}
+                    </div>
+                  )}
                 </div>
                 <div>
                   <h2 className="text-xl font-semibold leading-tight">
