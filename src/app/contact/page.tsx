@@ -1,7 +1,7 @@
 import { PageHero } from "@/components/page-hero";
 import { Section, Eyebrow } from "@/components/section";
 import { SITE } from "@/lib/site";
-import { MapPin, Handshake } from "lucide-react";
+import { MapPin, Phone, Hash, Handshake, Mail } from "lucide-react";
 
 export const metadata = {
   title: "Get in Touch — Aetherlink Global",
@@ -24,18 +24,20 @@ export default function ContactPage() {
           <article className="rounded-2xl border border-border bg-surface p-8">
             <Eyebrow>Company</Eyebrow>
             <h2 className="text-2xl font-semibold">{SITE.fullName}</h2>
-            <div className="mt-6 flex items-start gap-3">
-              <MapPin
-                className="h-5 w-5 shrink-0 text-accent"
-                strokeWidth={1.75}
-              />
-              <div>
-                <p className="text-xs font-medium uppercase tracking-wider text-muted">
-                  Office
-                </p>
-                <p className="mt-1 text-base text-foreground">
-                  {SITE.address}
-                </p>
+            <div className="mt-6 space-y-5">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-wider text-muted">Office</p>
+                  <p className="mt-1 text-sm text-foreground leading-relaxed">{SITE.address}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Hash className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-wider text-muted">Registration No.</p>
+                  <p className="mt-1 text-sm text-foreground">{SITE.regNo}</p>
+                </div>
               </div>
             </div>
             <p className="mt-6 text-sm leading-relaxed text-foreground/85">
@@ -63,15 +65,18 @@ export default function ContactPage() {
                 </span>
               ))}
             </div>
-            <div className="mt-7 flex items-center gap-3 rounded-xl border border-border-strong bg-background/60 p-4 text-sm text-muted">
-              <Handshake
-                className="h-5 w-5 shrink-0 text-accent"
-                strokeWidth={1.75}
-              />
-              <span>
-                Direct email and phone channels will be added here once
-                confirmed.
-              </span>
+            <div className="mt-7 space-y-3">
+              <a
+                href={`mailto:${SITE.email}`}
+                className="flex items-center gap-3 rounded-xl border border-border-strong bg-background/60 p-4 text-sm text-foreground hover:border-accent/50 transition-colors"
+              >
+                <Mail className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
+                <span>{SITE.email}</span>
+              </a>
+              <div className="flex items-center gap-3 rounded-xl border border-border-strong bg-background/60 p-4 text-sm text-foreground">
+                <Phone className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
+                <span>{SITE.phone}</span>
+              </div>
             </div>
           </article>
         </div>

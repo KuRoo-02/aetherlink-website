@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/site";
-import { Zap } from "lucide-react";
+import { Zap, Mail, Phone } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -39,10 +39,20 @@ export function SiteFooter() {
           <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">
             Contact
           </h3>
-          <ul className="mt-3 space-y-2 text-sm text-foreground/85">
-            <li>{SITE.address}</li>
-            <li className="text-muted">
-              {SITE.sectorTags.join(" · ")}
+          <ul className="mt-3 space-y-3 text-sm text-foreground/85">
+            <li className="text-xs leading-relaxed">{SITE.address}</li>
+            <li>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="flex items-center gap-2 text-foreground/80 hover:text-accent transition-colors"
+              >
+                <Mail className="h-3.5 w-3.5 shrink-0 text-accent" strokeWidth={1.75} />
+                {SITE.email}
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="h-3.5 w-3.5 shrink-0 text-accent" strokeWidth={1.75} />
+              {SITE.phone}
             </li>
           </ul>
         </div>

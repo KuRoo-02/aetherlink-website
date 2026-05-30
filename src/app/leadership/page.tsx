@@ -19,53 +19,47 @@ export default function LeadershipPage() {
       />
 
       <Section>
-        <div className="grid gap-8 md:grid-cols-2">
-          {LEADERSHIP.map((l) => (
+        <div className="flex flex-col gap-8">
+          {LEADERSHIP.map((l, i) => (
             <article
               key={l.name}
-              className="flex flex-col rounded-2xl border border-border bg-surface p-8"
+              className={`grid overflow-hidden rounded-2xl border border-border bg-surface ${i % 2 === 1 ? "grid-cols-[3fr_2fr]" : "grid-cols-[2fr_3fr]"}`}
             >
-              <div className="flex items-start gap-5">
-                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-border-strong bg-background">
-                  {l.photo ? (
-                    <img
-                      src={l.photo}
-                      alt={l.name}
-                      className="h-full w-full object-cover object-top"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center text-lg font-semibold text-heading">
-                      {l.initials}
-                    </div>
-                  )}
-                </div>
-                <div>
-                  <h2 className="text-xl font-semibold leading-tight">
-                    {l.name}
-                  </h2>
-                  <p className="mt-1 text-sm text-accent-soft">{l.role}</p>
-                </div>
+              <div className={`relative overflow-hidden bg-background ${i % 2 === 1 ? "[grid-column:2] [grid-row:1]" : ""}`}>
+                {l.photo ? (
+                  <img
+                    src={l.photo}
+                    alt={l.name}
+                    className="absolute inset-0 h-full w-full object-cover object-center"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold text-heading">
+                    {l.initials}
+                  </div>
+                )}
               </div>
 
-              <ul className="mt-6 space-y-1 text-xs text-muted">
-                {l.credentials.map((c) => (
-                  <li key={c}>· {c}</li>
-                ))}
-              </ul>
+              <div className={`flex flex-col justify-center gap-0 p-10 ${i % 2 === 1 ? "[grid-column:1] [grid-row:1]" : ""}`}>
+                <h2 className="text-3xl font-semibold leading-tight">{l.name}</h2>
+                <p className="mt-2 text-sm text-accent-soft">{l.role}</p>
 
-              <div className="mt-6 space-y-3 text-sm leading-relaxed text-foreground/85">
-                {l.bio.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+                <ul className="mt-5 space-y-1 text-xs text-muted">
+                  {l.credentials.map((c) => (
+                    <li key={c}>· {c}</li>
+                  ))}
+                </ul>
+
+                <div className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
+                  {l.bio.map((p, idx) => (
+                    <p key={idx}>{p}</p>
+                  ))}
+                </div>
+
+                <blockquote className="mt-6 flex gap-3 rounded-xl border border-border-strong bg-background/60 p-5">
+                  <Quote className="h-4 w-4 shrink-0 text-accent" strokeWidth={2} />
+                  <p className="text-sm italic text-foreground/90">{l.quote}</p>
+                </blockquote>
               </div>
-
-              <blockquote className="mt-7 flex gap-3 rounded-xl border border-border-strong bg-background/60 p-5">
-                <Quote
-                  className="h-4 w-4 shrink-0 text-accent"
-                  strokeWidth={2}
-                />
-                <p className="text-sm italic text-foreground/90">{l.quote}</p>
-              </blockquote>
             </article>
           ))}
         </div>

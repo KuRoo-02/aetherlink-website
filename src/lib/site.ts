@@ -6,11 +6,11 @@ export const SITE = {
   subtitle:
     "Telecommunications and infrastructure solutions for mission-critical operations.",
   vision: "Trusted. Connected. Reliable.",
-  address: "Kuala Lumpur, Malaysia",
+  address: "2A-1, Jalan Rampai Niaga 2, Rampai Business Park, 53300 Kuala Lumpur, W.P. Kuala Lumpur, Malaysia",
+  phone: "03-4142 2330",
+  regNo: "202601012079 (1674177-X)",
   sectorTags: ["Telecom", "Aviation", "Critical Infrastructure"],
-  // Email / phone not provided in company profile — leave as null until confirmed.
-  email: null as string | null,
-  phone: null as string | null,
+  email: "admin@aetherlink-global.com",
 };
 
 export const NAV_LINKS = [
