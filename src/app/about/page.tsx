@@ -16,6 +16,8 @@ export default function AboutPage() {
         eyebrow="About Aetherlink Global"
         title="Practical. Execution-focused. Accountable."
         description="We don't just design systems on paper. Every solution is engineered to perform under the specific conditions of each deployment — whether offshore, remote, or in a high-demand industrial environment."
+        imageSrc="/images/hero/about-hero.jpg"
+        imageAlt="Engineering team inspecting a construction site"
       />
 
       {/* WHO WE ARE */}

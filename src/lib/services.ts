@@ -12,6 +12,8 @@ export type Service = {
   slug: string;
   title: string;
   short: string;
+  image: string;
+  imageAlt: string;
   icon: LucideIcon;
 };
 
@@ -21,6 +23,8 @@ export const SERVICES: Service[] = [
     title: "Satellite Communications",
     short:
       "VSAT, Starlink, and hybrid solutions tailored for remote and offshore connectivity requirements.",
+    image: "/images/services/satellite-communications.jpg",
+    imageAlt: "Large satellite dish against a dark sky",
     icon: Satellite,
   },
   {
@@ -28,6 +32,8 @@ export const SERVICES: Service[] = [
     title: "IT & Network Infrastructure",
     short:
       "End-to-end design and deployment of robust network systems for industrial environments.",
+    image: "/images/services/network-infrastructure.jpg",
+    imageAlt: "Fiber optic patch panel with labeled cables",
     icon: Network,
   },
   {
@@ -35,6 +41,8 @@ export const SERVICES: Service[] = [
     title: "Telecom Engineering",
     short:
       "Specialist engineering solutions for complex telecommunications challenges in critical settings.",
+    image: "/images/services/telecom-engineering.jpg",
+    imageAlt: "Technician working on a telecom tower",
     icon: Radio,
   },
   {
@@ -42,6 +50,8 @@ export const SERVICES: Service[] = [
     title: "Consultancy & Advisory",
     short:
       "Technical guidance from assessment through to system design, ensuring the right solution for each site.",
+    image: "/images/services/consultancy-advisory.jpg",
+    imageAlt: "Engineers reviewing technical plans on a table",
     icon: Lightbulb,
   },
   {
@@ -49,6 +59,8 @@ export const SERVICES: Service[] = [
     title: "Project Delivery",
     short:
       "Structured implementation with accountability at every milestone, from planning to commissioning.",
+    image: "/images/services/project-delivery.jpg",
+    imageAlt: "Offshore platform structure above open water",
     icon: ClipboardCheck,
   },
   {
@@ -56,6 +68,8 @@ export const SERVICES: Service[] = [
     title: "Maintenance & Field Support",
     short:
       "Ongoing technical support to keep systems performing reliably after deployment.",
+    image: "/images/services/field-support.jpg",
+    imageAlt: "Field technician servicing industrial equipment",
     icon: Wrench,
   },
 ];

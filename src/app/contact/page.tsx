@@ -1,7 +1,7 @@
 import { PageHero } from "@/components/page-hero";
 import { Section, Eyebrow } from "@/components/section";
 import { SITE } from "@/lib/site";
-import { MapPin, Phone, Hash, Handshake, Mail } from "lucide-react";
+import { MapPin, Phone, Hash, Mail } from "lucide-react";
 
 export const metadata = {
   title: "Get in Touch — Aetherlink Global",

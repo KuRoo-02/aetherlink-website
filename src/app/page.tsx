@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, AlertTriangle, Cog, Briefcase } from "lucide-react";
 import { Section, Eyebrow } from "@/components/section";
 import { HeroOrbit } from "@/components/hero-orbit";
@@ -12,6 +13,15 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border/60">
+        <Image
+          src="/images/hero/satellite-dish.jpg"
+          alt="Large satellite dish silhouetted against the sky"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 h-full w-full object-cover opacity-35"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20" />
         <HeroOrbit />
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-24 pb-28 md:pt-32 md:pb-36">
           <Eyebrow>{SITE.fullName}</Eyebrow>
@@ -143,13 +153,23 @@ export default function HomePage() {
             return (
               <div
                 key={s.slug}
-                className="group relative bg-surface p-7 transition-colors hover:bg-surface-2"
+                className="group relative min-h-72 overflow-hidden bg-surface p-7 transition-colors hover:bg-surface-2"
               >
-                <Icon className="h-7 w-7 text-accent" strokeWidth={1.75} />
-                <h3 className="mt-5 text-base font-semibold">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {s.short}
-                </p>
+                <Image
+                  src={s.image}
+                  alt={s.imageAlt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="absolute inset-0 h-full w-full object-cover opacity-20 transition duration-500 group-hover:scale-105 group-hover:opacity-28"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-surface/85 to-surface/20" />
+                <div className="relative flex h-full flex-col justify-end">
+                  <Icon className="h-7 w-7 text-accent" strokeWidth={1.75} />
+                  <h3 className="mt-5 text-base font-semibold">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/85">
+                    {s.short}
+                  </p>
+                </div>
               </div>
             );
           })}
@@ -218,10 +238,25 @@ export default function HomePage() {
             return (
               <div
                 key={i.title}
-                className="rounded-2xl border border-border bg-surface p-6"
+                className="group overflow-hidden rounded-2xl border border-border bg-surface"
               >
-                <Icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
-                <h3 className="mt-4 text-base font-semibold">{i.title}</h3>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={i.image}
+                    alt={i.imageAlt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="h-full w-full object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <Icon
+                    className="absolute bottom-4 left-4 h-7 w-7 text-accent-soft"
+                    strokeWidth={1.5}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-base font-semibold">{i.title}</h3>
+                </div>
               </div>
             );
           })}
