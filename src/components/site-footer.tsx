@@ -9,15 +9,13 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-accent to-accent-soft">
-              <Image
-                src="/images/logo/aetherlink-mark.png"
-                alt=""
-                width={186}
-                height={98}
-                className="h-4.5 w-5.5 object-contain"
-              />
-            </span>
+            <Image
+              src="/images/logo/aetherlink-mark.png"
+              alt=""
+              width={186}
+              height={98}
+              className="h-7 w-10 object-contain"
+            />
             <span className="text-base font-semibold">{SITE.brand}</span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-muted">
