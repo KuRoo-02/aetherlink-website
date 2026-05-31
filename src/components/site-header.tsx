@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS } from "@/lib/site";
+import { NAV_LINKS, SITE } from "@/lib/site";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -16,15 +16,25 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center group" aria-label="Aetherlink Global home">
-          <Image
-            src="/images/logo/aetherlink-logo.png"
-            alt="Aetherlink Global Sdn Bhd"
-            width={226}
-            height={153}
-            priority
-            className="h-14 w-auto transition-opacity group-hover:opacity-90"
-          />
+        <Link href="/" className="flex items-center gap-2 group">
+          <span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-linear-to-br from-accent to-accent-soft shadow-[0_0_24px_rgba(59,130,246,0.45)]">
+            <Image
+              src="/images/logo/aetherlink-mark.png"
+              alt=""
+              width={186}
+              height={98}
+              priority
+              className="h-5 w-6 object-contain"
+            />
+          </span>
+          <span className="flex flex-col leading-none">
+            <span className="text-base font-semibold tracking-tight">
+              {SITE.brand}
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.18em] text-muted">
+              Sdn Bhd
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
