@@ -1,18 +1,20 @@
+import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/site";
-import { Zap, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-background/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-md bg-linear-to-br from-accent to-accent-soft text-background">
-              <Zap className="h-3.5 w-3.5" strokeWidth={2.5} />
-            </span>
-            <span className="text-base font-semibold">{SITE.brand}</span>
-          </div>
+          <Image
+            src="/images/logo/aetherlink-logo.png"
+            alt="Aetherlink Global Sdn Bhd"
+            width={226}
+            height={153}
+            className="h-16 w-auto"
+          />
           <p className="mt-3 max-w-xs text-sm text-muted">
             Telecommunications and infrastructure solutions for mission-critical operations.
           </p>
