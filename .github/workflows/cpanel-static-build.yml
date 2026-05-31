@@ -1,0 +1,43 @@
+name: Build cPanel Static Site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build static export
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Package cPanel upload zip
+        run: |
+          cd out
+          zip -r ../aetherlink-cpanel-static.zip .
+
+      - name: Upload cPanel artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aetherlink-cpanel-static
+          path: aetherlink-cpanel-static.zip
+          retention-days: 14
