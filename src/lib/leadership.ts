@@ -25,17 +25,17 @@ export const LEADERSHIP: Leader[] = [
     ],
     quote: "Driving growth through engineering capability and commercial execution.",
   },
-  {
-    name: "Khairul Fazly Hamidon",
-    role: "Director | Technical & Operations",
-    initials: "KF",
-    photo: "/images/team/khairul-fazly.png",
-    credentials: ["MBA, Universiti Tun Abdul Razak (UNITAR)"],
-    bio: [
-      "A telecommunications professional with over 17 years of experience in VSAT, satellite communications, LTE and mission-critical infrastructure within the Oil & Gas and industrial sectors.",
-      "Proven track record in end-to-end project delivery, offshore deployments and managing complex operations with consistent >98% SLA performance.",
-      "Project exposure includes major clients such as PETRONAS, Shell and Total Energies — delivering reliable connectivity across offshore platforms and remote environments.",
-    ],
-    quote: "Execution focused — ensuring systems perform reliably where it matters most.",
-  },
+  // {
+  //   name: "Khairul Fazly Hamidon",
+  //   role: "Director | Technical & Operations",
+  //   initials: "KF",
+  //   photo: "/images/team/khairul-fazly.png",
+  //   credentials: ["MBA, Universiti Tun Abdul Razak (UNITAR)"],
+  //   bio: [
+  //     "A telecommunications professional with over 17 years of experience in VSAT, satellite communications, LTE and mission-critical infrastructure within the Oil & Gas and industrial sectors.",
+  //     "Proven track record in end-to-end project delivery, offshore deployments and managing complex operations with consistent >98% SLA performance.",
+  //     "Project exposure includes major clients such as PETRONAS, Shell and Total Energies — delivering reliable connectivity across offshore platforms and remote environments.",
+  //   ],
+  //   quote: "Execution focused — ensuring systems perform reliably where it matters most.",
+  // },
 ];
