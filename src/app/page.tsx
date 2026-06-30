@@ -14,7 +14,7 @@ export default function HomePage() {
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-border/60">
         <Image
-          src="/images/hero/satellite-dish.jpg"
+          src="/images/hero/satellite-dish.webp"
           alt="Large satellite dish silhouetted against the sky"
           fill
           priority

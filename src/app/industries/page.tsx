@@ -16,7 +16,7 @@ export default function IndustriesPage() {
         eyebrow="Where we operate"
         title="Built for sectors where the network has to keep running."
         description="From offshore platforms to airside facilities, Aetherlink delivers connectivity and infrastructure to the industries where downtime is not an option."
-        imageSrc="/images/hero/industries-hero.jpg"
+        imageSrc="/images/hero/industries-hero.webp"
         imageAlt="Industrial facility with illuminated stacks at night"
       />
 

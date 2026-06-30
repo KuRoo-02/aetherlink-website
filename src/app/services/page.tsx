@@ -18,7 +18,7 @@ export default function ServicesPage() {
         eyebrow="Core services"
         title="Six capabilities. One accountable partner."
         description="From initial consultancy through to commissioning and ongoing field support, Aetherlink covers the full lifecycle of building and running connectivity for mission-critical environments."
-        imageSrc="/images/hero/services-hero.jpg"
+        imageSrc="/images/hero/services-hero.webp"
         imageAlt="Network engineer connecting cables inside a server rack"
       />
 

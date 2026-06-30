@@ -13,7 +13,7 @@ export const LEADERSHIP: Leader[] = [
     name: "Mohd Arif Hakimi Mohd Radhi",
     role: "Director | Strategy & Business Development",
     initials: "AH",
-    photo: "/images/team/ariff-hakimi.png",
+    photo: "/images/team/ariff-hakimi.webp",
     credentials: [
       "Engineering Technologist, Board of Engineers Malaysia (BEM)",
       "B. Aircraft Engineering Technology (Mechanical), UniKL MIAT",
@@ -29,7 +29,7 @@ export const LEADERSHIP: Leader[] = [
   //   name: "Khairul Fazly Hamidon",
   //   role: "Director | Technical & Operations",
   //   initials: "KF",
-  //   photo: "/images/team/khairul-fazly.png",
+  //   photo: "/images/team/khairul-fazly.webp",
   //   credentials: ["MBA, Universiti Tun Abdul Razak (UNITAR)"],
   //   bio: [
   //     "A telecommunications professional with over 17 years of experience in VSAT, satellite communications, LTE and mission-critical infrastructure within the Oil & Gas and industrial sectors.",
