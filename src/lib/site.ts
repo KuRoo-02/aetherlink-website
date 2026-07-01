@@ -17,7 +17,8 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
-  { href: "/leadership", label: "Leadership" },
+  // Hidden for now — re-enable to show the Leadership page in the nav.
+  // { href: "/leadership", label: "Leadership" },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ];
