@@ -7,6 +7,7 @@ import { WhatWeDoRoad } from "@/components/what-we-do-road";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { INDUSTRIES } from "@/lib/industries";
+import { AVIATION_SERVICES } from "@/lib/aviation";
 
 export default function HomePage() {
   return (
@@ -73,7 +74,7 @@ export default function HomePage() {
               Connectivity and infrastructure for mission-critical operations.
             </h2>
           </div>
-          <div className="md:col-span-3 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
+          <div className="md:col-span-3 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
             {[
               {
                 title: "Satellite Communications",
@@ -87,12 +88,31 @@ export default function HomePage() {
                 title: "Field Execution",
                 body: "End-to-end project delivery.",
               },
-            ].map((p) => (
-              <div key={p.title} className="bg-surface p-6">
-                <h3 className="text-base font-semibold">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted">{p.body}</p>
-              </div>
-            ))}
+              {
+                title: "Aviation",
+                body: "Aircraft teardown, asset recovery and parts.",
+                href: "/aviation",
+              },
+            ].map((p) =>
+              p.href ? (
+                <Link
+                  key={p.title}
+                  href={p.href}
+                  className="group bg-surface p-6 transition-colors hover:bg-surface-2"
+                >
+                  <h3 className="flex items-center gap-1 text-base font-semibold">
+                    {p.title}
+                    <ArrowRight className="h-4 w-4 text-accent-soft transition-transform group-hover:translate-x-0.5" />
+                  </h3>
+                  <p className="mt-2 text-sm text-muted">{p.body}</p>
+                </Link>
+              ) : (
+                <div key={p.title} className="bg-surface p-6">
+                  <h3 className="text-base font-semibold">{p.title}</h3>
+                  <p className="mt-2 text-sm text-muted">{p.body}</p>
+                </div>
+              )
+            )}
           </div>
         </div>
       </Section>
@@ -173,6 +193,39 @@ export default function HomePage() {
               </div>
             );
           })}
+        </div>
+      </Section>
+
+      {/* AVIATION BUSINESS LINE */}
+      <Section className="border-t border-border/60">
+        <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-surface">
+          <Image
+            src="/images/aviation/teardown-airframe-sections.webp"
+            alt="Widebody airframe cut into sections on the apron"
+            fill
+            sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover opacity-35"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/90 to-surface/30" />
+          <div className="relative p-10 md:p-14">
+            <Eyebrow>Aviation business line</Eyebrow>
+            <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+              Aircraft teardown, asset recovery and parts — from our Subang hangar.
+            </h2>
+            <ul className="mt-8 grid max-w-2xl gap-x-8 gap-y-2 sm:grid-cols-2">
+              {AVIATION_SERVICES.map((s) => (
+                <li key={s.slug} className="text-sm text-foreground/85">
+                  {s.title}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/aviation"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white hover:bg-accent-soft transition-colors glow-blue"
+            >
+              Explore Aviation <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </Section>
 

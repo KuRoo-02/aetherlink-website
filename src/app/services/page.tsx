@@ -1,6 +1,7 @@
 import { PageHero } from "@/components/page-hero";
-import { Section } from "@/components/section";
+import { Section, Eyebrow } from "@/components/section";
 import { SERVICES } from "@/lib/services";
+import { AVIATION_SERVICES } from "@/lib/aviation";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -53,6 +54,40 @@ export default function ServicesPage() {
               </article>
             );
           })}
+        </div>
+
+        {/* Aviation business line */}
+        <div className="mt-20">
+          <Eyebrow>Aviation business line</Eyebrow>
+          <div className="flex items-end justify-between flex-wrap gap-6">
+            <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+              Aircraft teardown, asset recovery and aviation support.
+            </h2>
+            <Link
+              href="/aviation"
+              className="text-sm text-accent-soft hover:text-accent inline-flex items-center gap-1"
+            >
+              Explore Aviation <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+            {AVIATION_SERVICES.map((s) => {
+              const Icon = s.icon;
+              return (
+                <Link
+                  key={s.slug}
+                  href="/aviation"
+                  className="group bg-surface p-7 transition-colors hover:bg-surface-2"
+                >
+                  <Icon className="h-7 w-7 text-accent" strokeWidth={1.75} />
+                  <h3 className="mt-5 text-base font-semibold">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/85">
+                    {s.short}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
         <div className="mt-16 rounded-3xl border border-border-strong bg-surface p-10 text-center">

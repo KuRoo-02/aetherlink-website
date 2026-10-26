@@ -16,6 +16,7 @@ export const SITE = {
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/aviation", label: "Aviation" },
   { href: "/industries", label: "Industries" },
   // Hidden for now — re-enable to show the Leadership page in the nav.
   // { href: "/leadership", label: "Leadership" },

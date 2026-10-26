@@ -1,7 +1,8 @@
 import { PageHero } from "@/components/page-hero";
 import { Section, Eyebrow } from "@/components/section";
 import { SITE } from "@/lib/site";
-import { MapPin, Phone, Hash, Mail } from "lucide-react";
+import { HANGAR } from "@/lib/aviation";
+import { MapPin, Phone, Hash, Mail, Plane } from "lucide-react";
 
 export const metadata = {
   title: "Get in Touch — Aetherlink Global",
@@ -30,6 +31,14 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs font-medium uppercase tracking-wider text-muted">Office</p>
                   <p className="mt-1 text-sm text-foreground leading-relaxed">{SITE.address}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Plane className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-wider text-muted">Aviation Hangar</p>
+                  <p className="mt-1 text-sm text-foreground leading-relaxed">{HANGAR.location}</p>
+                  <p className="mt-1 text-xs text-muted">Exact address shared upon contact.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
