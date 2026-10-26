@@ -191,6 +191,4 @@ export const TEARDOWN_GALLERY = [
 
 export const HANGAR = {
   location: "Subang, Selangor, Malaysia",
-  image: "/images/aviation/hangar-subang-exterior.webp",
-  imageAlt: "Aetherlink Global hangar in Subang with an aircraft parked outside",
 };

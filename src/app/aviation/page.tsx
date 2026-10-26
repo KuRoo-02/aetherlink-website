@@ -199,24 +199,15 @@ export default function AviationPage() {
 
       {/* HANGAR / LOCATION */}
       <Section className="border-t border-border/60">
-        <div className="grid overflow-hidden rounded-3xl border border-border-strong bg-surface md:grid-cols-2">
-          <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[28rem]">
-            <Image
-              src={HANGAR.image}
-              alt={HANGAR.imageAlt}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div className="relative flex flex-col justify-center p-10 md:p-14">
+        <div className="overflow-hidden rounded-3xl border border-border-strong bg-surface">
+          <div className="relative p-10 md:p-14">
             <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
             <div className="relative">
               <Eyebrow>Our hangar</Eyebrow>
               <h2 className="text-3xl font-semibold md:text-4xl">
                 Based in Subang.
               </h2>
-              <p className="mt-5 text-foreground/85">
+              <p className="mt-5 max-w-xl text-foreground/85">
                 Our aviation operations run from a dedicated hangar in Subang —
                 close to the region&rsquo;s airlines, lessors and MROs.
               </p>
