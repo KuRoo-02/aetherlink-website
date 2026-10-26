@@ -182,7 +182,7 @@ export default function AviationPage() {
             <figure
               key={g.src}
               className={`group relative overflow-hidden rounded-2xl border border-border bg-surface ${
-                g.tall ? "aspect-[3/4]" : "col-span-2 aspect-[16/10] lg:col-span-1 lg:aspect-[3/4]"
+                g.tall ? "aspect-[3/4]" : "col-span-2 aspect-[16/10] lg:order-last lg:aspect-auto"
               }`}
             >
               <Image

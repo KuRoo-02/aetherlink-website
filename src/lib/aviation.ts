@@ -187,11 +187,6 @@ export const TEARDOWN_GALLERY = [
     alt: "Airbus narrowbody parked with engine covers fitted",
     tall: true,
   },
-  {
-    src: "/images/aviation/hangar-subang-interior.webp",
-    alt: "Aircraft inside the hangar with teams working around it",
-    tall: false,
-  },
 ];
 
 export const HANGAR = {
