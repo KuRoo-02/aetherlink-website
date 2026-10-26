@@ -2,6 +2,7 @@ import { PageHero } from "@/components/page-hero";
 import { Section, Eyebrow } from "@/components/section";
 import { SITE } from "@/lib/site";
 import { HANGAR } from "@/lib/aviation";
+import { EnquiryForm } from "@/components/enquiry-form";
 import { MapPin, Phone, Hash, Mail, Plane } from "lucide-react";
 
 export const metadata = {
@@ -88,6 +89,24 @@ export default function ContactPage() {
               </div>
             </div>
           </article>
+        </div>
+
+        {/* Enquiry form */}
+        <div
+          id="enquiry"
+          className="mt-6 grid scroll-mt-20 gap-10 rounded-2xl border border-border-strong bg-surface p-8 md:grid-cols-5 md:p-10"
+        >
+          <div className="md:col-span-2">
+            <Eyebrow>Enquiry form</Eyebrow>
+            <h2 className="text-2xl font-semibold md:text-3xl">Send us an enquiry.</h2>
+            <p className="mt-4 text-sm leading-relaxed text-foreground/85">
+              Share a few details about what you need and our team will get
+              back to you. Fields marked * are required.
+            </p>
+          </div>
+          <div className="md:col-span-3">
+            <EnquiryForm />
+          </div>
         </div>
       </Section>
     </>
