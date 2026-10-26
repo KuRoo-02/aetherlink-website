@@ -165,37 +165,31 @@ export const TEARDOWN_GALLERY = [
   {
     src: "/images/aviation/teardown-crane-lift.webp",
     alt: "Mobile cranes supporting a widebody fuselage during teardown",
-    caption: "Crane-supported widebody teardown",
     tall: true,
   },
   {
     src: "/images/aviation/teardown-fuselage-hangar.webp",
     alt: "Separated Airbus fuselage section resting inside the hangar",
-    caption: "Fuselage sectioning in hangar",
     tall: true,
   },
   {
     src: "/images/aviation/teardown-parked-widebody.webp",
     alt: "Widebody aircraft parked on the apron with doors and radome removed",
-    caption: "Widebody part-out on the apron",
     tall: false,
   },
   {
     src: "/images/aviation/teardown-airframe-cutting.webp",
     alt: "Excavator dismantling an airframe section on the apron",
-    caption: "Controlled airframe dismantling",
     tall: true,
   },
   {
     src: "/images/aviation/aircraft-storage-a319.webp",
     alt: "Airbus narrowbody parked with engine covers fitted",
-    caption: "Aircraft preserved ahead of teardown",
     tall: true,
   },
   {
     src: "/images/aviation/hangar-subang-interior.webp",
     alt: "Aircraft inside the hangar with teams working around it",
-    caption: "Hangar works in progress",
     tall: false,
   },
 ];

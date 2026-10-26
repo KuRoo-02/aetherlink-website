@@ -192,10 +192,6 @@ export default function AviationPage() {
                 sizes="(max-width: 1024px) 50vw, 33vw"
                 className="h-full w-full object-cover opacity-85 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-transparent to-transparent" />
-              <figcaption className="absolute bottom-4 left-4 right-4 text-sm font-medium text-foreground">
-                {g.caption}
-              </figcaption>
             </figure>
           ))}
         </div>
