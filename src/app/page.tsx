@@ -90,7 +90,7 @@ export default function HomePage() {
               },
               {
                 title: "Aviation",
-                body: "Aircraft teardown, asset recovery and parts.",
+                body: "Consultancy, asset acquisition and parts trading.",
                 href: "/aviation",
               },
             ].map((p) =>
@@ -210,7 +210,7 @@ export default function HomePage() {
           <div className="relative p-10 md:p-14">
             <Eyebrow>Aviation business line</Eyebrow>
             <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
-              Aircraft teardown, asset recovery and parts — from our Subang hangar.
+              Aviation Expertise. Asset Solutions. Global Reach.
             </h2>
             <ul className="mt-8 grid max-w-2xl gap-x-8 gap-y-2 sm:grid-cols-2">
               {AVIATION_SERVICES.map((s) => (

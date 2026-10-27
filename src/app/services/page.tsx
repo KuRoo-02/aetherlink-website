@@ -61,7 +61,7 @@ export default function ServicesPage() {
           <Eyebrow>Aviation business line</Eyebrow>
           <div className="flex items-end justify-between flex-wrap gap-6">
             <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
-              Aircraft teardown, asset recovery and aviation support.
+              Aviation expertise, asset acquisition and component solutions.
             </h2>
             <Link
               href="/aviation"

@@ -1,8 +1,8 @@
 import {
+  FileSearch,
   PlaneTakeoff,
   PackageSearch,
   Wrench,
-  HardHat,
   Recycle,
   Award,
   Globe2,
@@ -18,58 +18,47 @@ export type AviationService = {
   slug: string;
   title: string;
   short: string;
-  points: string[];
   icon: LucideIcon;
+  image: string;
+  imageAlt: string;
 };
 
 export const AVIATION_SERVICES: AviationService[] = [
+  {
+    slug: "aviation-consultancy",
+    title: "Aviation Consultancy",
+    short:
+      "Independent technical consultancy for aircraft acquisition, acceptance, CAMO and continuing-airworthiness support, maintenance programmes, MRO coordination, and regulatory compliance.",
+    icon: FileSearch,
+    image: "/images/aviation/service-consultancy.webp",
+    imageAlt: "Wing-mounted engine with cowlings open for technical inspection",
+  },
+  {
+    slug: "asset-acquisition",
+    title: "Aircraft, Engine, APU and Landing Gear Acquisition",
+    short:
+      "We source and support the acquisition of aircraft, engines, APUs, and landing gear—combining technical due diligence with commercial insight and transactional support.",
+    icon: PlaneTakeoff,
+    image: "/images/aviation/service-asset-acquisition.webp",
+    imageAlt: "Aircraft engine, APU and landing gear staged on stands in a hangar",
+  },
+  {
+    slug: "components-parts-trading",
+    title: "Components and Parts Trading",
+    short:
+      "Reliable sourcing and supply of aircraft components, parts, and consumables—backed by traceability, airworthiness documentation, and responsive service.",
+    icon: PackageSearch,
+    image: "/images/aviation/service-parts-trading.webp",
+    imageAlt: "Aircraft components and parts arranged on pallets in a warehouse",
+  },
   {
     slug: "teardown-asset-recovery",
     title: "Aircraft Teardown & Asset Recovery",
     short:
       "End-of-life aircraft and engines turned into recoverable value — from first panel off to last crate shipped.",
-    points: [
-      "Full aircraft and engine part-out",
-      "Serviceable component recovery",
-      "Responsible airframe disposal",
-    ],
-    icon: PlaneTakeoff,
-  },
-  {
-    slug: "parts-materials-trading",
-    title: "Parts & Materials Sourcing",
-    short:
-      "Recovered components and aerospace-grade materials sourced, traced and supplied to operators, MROs and traders.",
-    points: [
-      "Traceable, tagged inventory",
-      "Rotables, consumables and structures",
-      "Recycled aluminium and alloys",
-    ],
-    icon: PackageSearch,
-  },
-  {
-    slug: "engineering-services",
-    title: "Engineering Services",
-    short:
-      "Practical engineering support across aviation, marine and land — planned and executed by people who have done the work.",
-    points: [
-      "Aviation, marine and land projects",
-      "Hangar and airside works",
-      "Project planning and supervision",
-    ],
     icon: Wrench,
-  },
-  {
-    slug: "manpower-supply",
-    title: "Technical Manpower Supply",
-    short:
-      "Skilled technicians and support crew deployed to your programme, scaled up or down as the job demands.",
-    points: [
-      "Licensed and experienced technicians",
-      "Short-term and long-term deployment",
-      "Teardown and line support crews",
-    ],
-    icon: HardHat,
+    image: "/images/aviation/service-teardown.webp",
+    imageAlt: "Technicians stripping insulation inside an aircraft fuselage during teardown",
   },
 ];
 
@@ -143,8 +132,8 @@ export const TEARDOWN_STEPS: TeardownStep[] = [
       "Landing gear, flight controls, radomes",
     ],
     icon: Package,
-    image: "/images/aviation/hangar-subang-engines.webp",
-    imageAlt: "Engines on transport stands, wrapped and staged inside the hangar",
+    image: "/images/aviation/teardown-nacelle-removal.webp",
+    imageAlt: "Engine nacelle opened up for component removal on the apron",
   },
   {
     step: "04",
