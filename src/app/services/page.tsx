@@ -42,7 +42,7 @@ export default function ServicesPage() {
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
-                  <div className="absolute bottom-5 left-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-md">
+                  <div className="absolute bottom-5 left-5 flex h-12 w-12 items-center justify-center rounded-xl bg-surface shadow-md">
                     <Icon className="h-6 w-6 text-accent-soft" strokeWidth={1.75} />
                   </div>
                 </div>

@@ -167,25 +167,29 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => {
             const Icon = s.icon;
             return (
               <div
                 key={s.slug}
-                className="group relative min-h-72 overflow-hidden bg-surface p-7 transition-colors hover:bg-surface-2"
+                className="group overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_1px_2px_rgba(10,28,68,0.08),0_10px_28px_-16px_rgba(10,28,68,0.35)]"
               >
-                <Image
-                  src={s.image}
-                  alt={s.imageAlt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="absolute inset-0 h-full w-full object-cover opacity-20 transition duration-500 group-hover:scale-105 group-hover:opacity-28"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-surface/85 to-surface/20" />
-                <div className="relative flex h-full flex-col justify-end">
-                  <Icon className="h-7 w-7 text-accent" strokeWidth={1.75} />
-                  <h3 className="mt-5 text-base font-semibold">{s.title}</h3>
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <Image
+                    src={s.image}
+                    alt={s.imageAlt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
+                  <span className="absolute bottom-4 left-4 flex h-11 w-11 items-center justify-center rounded-xl bg-surface shadow-md">
+                    <Icon className="h-5 w-5 text-accent" strokeWidth={1.75} />
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-base font-semibold">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/85">
                     {s.short}
                   </p>
@@ -233,14 +237,14 @@ export default function HomePage() {
                 {AVIATION_PARTNERS.map((p) => (
                   <span
                     key={p.name}
-                    className="flex h-12 items-center rounded-lg border border-border bg-white px-3"
+                    className="flex h-12 items-center rounded-lg border border-border bg-surface px-3"
                   >
                     <Image
                       src={p.logo}
                       alt={p.name}
                       width={p.logoWidth}
                       height={p.logoHeight}
-                      className="h-8 w-auto object-contain"
+                      className="h-8 w-auto object-contain mix-blend-multiply dark:mix-blend-normal"
                     />
                   </span>
                 ))}

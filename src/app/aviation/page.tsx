@@ -143,7 +143,7 @@ export default function AviationPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
                   <div className="absolute bottom-4 left-4 flex items-center gap-3">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow-md">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface shadow-md">
                       <Icon className="h-5 w-5 text-accent" strokeWidth={1.75} />
                     </span>
                     <span className="text-xs font-medium uppercase tracking-[0.18em] text-white">
@@ -190,7 +190,7 @@ export default function AviationPage() {
             </div>
             <Link
               href="/contact"
-              className="relative mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-accent-strong transition-colors hover:bg-white/90"
+              className="relative mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-surface px-6 py-3 text-sm font-medium text-accent-strong transition-colors hover:bg-surface-2"
             >
               Discuss your requirement <ArrowRight className="h-4 w-4" />
             </Link>
@@ -219,13 +219,13 @@ export default function AviationPage() {
               key={p.name}
               className="flex flex-col overflow-hidden rounded-2xl border border-border bg-surface"
             >
-              <div className="flex h-40 items-center justify-center border-b border-border bg-white px-8">
+              <div className="flex h-40 items-center justify-center border-b border-border bg-surface-2 px-8 dark:bg-white">
                 <Image
                   src={p.logo}
                   alt={`${p.name} logo`}
                   width={p.logoWidth}
                   height={p.logoHeight}
-                  className="max-h-24 w-auto max-w-full object-contain"
+                  className="max-h-24 w-auto max-w-full object-contain mix-blend-multiply"
                 />
               </div>
               <div className="flex flex-1 flex-col p-7">

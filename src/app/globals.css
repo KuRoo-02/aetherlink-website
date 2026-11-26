@@ -3,20 +3,20 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
-  /* Light theme — "atmosphere": cool sky haze instead of paper white */
-  --background: #edf1f6;   /* haze: page */
-  --foreground: #24344c;   /* body ink */
-  --muted: #5b6a82;
-  --heading: #0c2147;      /* navy ink */
-  --accent: #2563eb;
-  --accent-soft: #1d4ed8;  /* text links + button hover: darker on light */
+  /* Light theme — "Mist Blue": clearly blue-tinted, nothing pure white */
+  --background: #d3e0f1;   /* page */
+  --foreground: #1a2b46;   /* body ink */
+  --muted: #44587a;
+  --heading: #0a1c44;      /* navy ink */
+  --accent: #1d4ed8;
+  --accent-soft: #1e40af;  /* text links + button hover */
   --accent-strong: #1e3a8a;
-  --surface: #f9fbfd;      /* cloud: cards lift off the haze */
-  --surface-2: #f1f5fa;
-  --border: #d5deea;
-  --border-strong: #bccadc;
-  --band: #e1e8f1;         /* stratus: alternating section band */
-  --bg-top: #e6edf6;
+  --surface: #e3ecf8;      /* cards, header, panels */
+  --surface-2: #dce7f5;
+  --border: #afc3de;
+  --border-strong: #9ab2d4;
+  --band: #c0d2ea;         /* alternating section band */
+  --bg-top: #c9d9ef;
   color-scheme: light;
 }
 
