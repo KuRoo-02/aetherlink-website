@@ -57,7 +57,7 @@ export default function AviationPage() {
               alt={p.name}
               width={p.logoWidth}
               height={p.logoHeight}
-              className="h-14 w-auto object-contain mix-blend-multiply md:h-16"
+              className="h-14 w-auto object-contain mix-blend-multiply md:h-16 dark:mix-blend-normal dark:rounded-lg dark:bg-white dark:p-1.5"
             />
           ))}
         </div>
@@ -94,7 +94,7 @@ export default function AviationPage() {
           {AVIATION_CAPABILITIES.map((c, i) => {
             const Icon = c.icon;
             return (
-              <li key={c.slug} className="bg-background last:col-span-2 sm:last:col-span-1">
+              <li key={c.slug} className="bg-surface last:col-span-2 sm:last:col-span-1">
                 <a
                   href={`#${c.slug}`}
                   className="group flex h-full flex-col gap-3 p-5 transition-colors hover:bg-surface"
@@ -119,7 +119,7 @@ export default function AviationPage() {
       </Section>
 
       {/* CAPABILITIES */}
-      <Section id="capabilities" className="border-t border-border/60 scroll-mt-20">
+      <Section id="capabilities" className="scroll-mt-20" tone="tint">
         <Eyebrow>Our capabilities</Eyebrow>
         <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
           Five service lines. One accountable team.
@@ -131,7 +131,7 @@ export default function AviationPage() {
               <article
                 key={c.slug}
                 id={c.slug}
-                className="group flex scroll-mt-24 flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-shadow hover:shadow-lg hover:shadow-accent/10"
+                className="group flex scroll-mt-24 flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_1px_2px_rgba(12,33,71,0.06)] transition-shadow hover:shadow-lg hover:shadow-accent/10"
               >
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
@@ -199,7 +199,7 @@ export default function AviationPage() {
       </Section>
 
       {/* PARTNERS */}
-      <Section id="partners" className="border-t border-border/60 scroll-mt-20">
+      <Section id="partners" className="scroll-mt-20">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <Eyebrow>Our partners</Eyebrow>
@@ -217,7 +217,7 @@ export default function AviationPage() {
           {AVIATION_PARTNERS.map((p) => (
             <article
               key={p.name}
-              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-background"
+              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-surface"
             >
               <div className="flex h-40 items-center justify-center border-b border-border bg-white px-8">
                 <Image
@@ -254,7 +254,7 @@ export default function AviationPage() {
       </Section>
 
       {/* WHY AETHERLINK AVIATION */}
-      <Section className="border-t border-border/60">
+      <Section tone="tint">
         <Eyebrow>Why work with us</Eyebrow>
         <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
           One partner for every stage of the aircraft.
@@ -276,7 +276,7 @@ export default function AviationPage() {
       </Section>
 
       {/* TEARDOWN PROCESS */}
-      <Section id="teardown" className="border-t border-border/60 scroll-mt-20">
+      <Section id="teardown" className="scroll-mt-20">
         <Eyebrow>Aircraft teardown &amp; part-out</Eyebrow>
         <h2 className="max-w-3xl text-3xl font-semibold md:text-4xl">
           Tailored solutions for end-of-life aircraft and engines.
@@ -294,7 +294,7 @@ export default function AviationPage() {
             return (
               <article
                 key={s.step}
-                className="grid overflow-hidden rounded-2xl border border-border bg-background md:grid-cols-2"
+                className="grid overflow-hidden rounded-2xl border border-border bg-surface md:grid-cols-2"
               >
                 <div
                   className={`relative aspect-[16/10] md:aspect-auto md:min-h-80 ${
@@ -341,7 +341,7 @@ export default function AviationPage() {
       </Section>
 
       {/* GALLERY */}
-      <Section className="border-t border-border/60">
+      <Section tone="tint">
         <Eyebrow>From the field</Eyebrow>
         <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
           Teardown projects in progress.
@@ -367,7 +367,7 @@ export default function AviationPage() {
       </Section>
 
       {/* CTA */}
-      <Section className="border-t border-border/60">
+      <Section tone="dark">
         <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-surface p-10 md:p-14">
           <div className="absolute inset-0 grid-bg opacity-60 pointer-events-none" />
           <div className="relative">

@@ -47,7 +47,7 @@ export default function AboutPage() {
       </Section>
 
       {/* OUR APPROACH — Plan / Deploy / Validate */}
-      <Section className="border-t border-border/60">
+      <Section tone="tint">
         <Eyebrow>Our approach</Eyebrow>
         <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
           Engineered for real environments — not ideal ones.
@@ -88,7 +88,7 @@ export default function AboutPage() {
       </Section>
 
       {/* WHY AETHERLINK */}
-      <Section className="border-t border-border/60">
+      <Section>
         <Eyebrow>Why Aetherlink</Eyebrow>
         <h2 className="text-3xl font-semibold md:text-4xl">
           We don&rsquo;t just advise. We deliver.
@@ -126,7 +126,7 @@ export default function AboutPage() {
       </Section>
 
       {/* BUSINESS MODEL */}
-      <Section className="border-t border-border/60">
+      <Section tone="tint">
         <Eyebrow>Business model</Eyebrow>
         <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
           A structured, two-phase approach designed to scale with performance.
@@ -185,7 +185,7 @@ export default function AboutPage() {
       </Section>
 
       {/* VISION */}
-      <Section className="border-t border-border/60">
+      <Section tone="dark">
         <div className="rounded-3xl border border-border-strong bg-surface p-10 md:p-14">
           <Eyebrow>Our vision</Eyebrow>
           <h2 className="text-4xl font-semibold md:text-5xl">{SITE.vision}</h2>

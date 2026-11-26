@@ -159,7 +159,7 @@ export function WhatWeDoRoad() {
     progress < STEP_THRESHOLDS[0] ? 0 : progress < STEP_THRESHOLDS[1] ? 1 : 2;
 
   return (
-    <section className="relative border-t border-border/60">
+    <section className="relative">
       {/* Title — sits in normal flow above the sticky stage so it scrolls
           past before the road takes over the viewport. */}
       <div className="hidden md:block mx-auto w-full max-w-7xl px-6 pt-24 pb-8">

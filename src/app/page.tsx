@@ -118,7 +118,7 @@ export default function HomePage() {
       </Section>
 
       {/* THE REALITY IN THE FIELD */}
-      <Section className="border-t border-border/60">
+      <Section tone="tint">
         <Eyebrow>The reality in the field</Eyebrow>
         <h2 className="max-w-3xl text-3xl font-semibold md:text-4xl">
           In critical environments, systems don&rsquo;t fail because of a lack
@@ -151,7 +151,7 @@ export default function HomePage() {
       <WhatWeDoRoad />
 
       {/* SERVICES TEASER */}
-      <Section className="border-t border-border/60">
+      <Section tone="tint">
         <div className="flex items-end justify-between flex-wrap gap-6 mb-12">
           <div>
             <Eyebrow>Core services</Eyebrow>
@@ -197,7 +197,7 @@ export default function HomePage() {
       </Section>
 
       {/* AVIATION BUSINESS LINE */}
-      <Section className="border-t border-border/60">
+      <Section>
         <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-surface">
           <Image
             src="/images/aviation/teardown-airframe-sections.webp"
@@ -251,7 +251,7 @@ export default function HomePage() {
       </Section>
 
       {/* COMBINED STRENGTH */}
-      <Section className="border-t border-border/60">
+      <Section tone="tint">
         <Eyebrow>Combined strength</Eyebrow>
         <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
           Two complementary pillars — reliable delivery and scalable growth.
@@ -291,7 +291,7 @@ export default function HomePage() {
       </Section>
 
       {/* INDUSTRIES TEASER */}
-      <Section className="border-t border-border/60">
+      <Section>
         <div className="flex items-end justify-between flex-wrap gap-6 mb-10">
           <div>
             <Eyebrow>Where we operate</Eyebrow>
@@ -338,7 +338,7 @@ export default function HomePage() {
       </Section>
 
       {/* VISION / CTA */}
-      <Section className="border-t border-border/60">
+      <Section tone="dark">
         <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-surface p-10 md:p-14">
           <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
           <div className="relative">

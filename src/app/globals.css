@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
-  /* Light theme */
-  --background: #ffffff;
-  --foreground: #1a2638;
-  --muted: #5a6a84;
-  --heading: #0f2a56;
+  /* Light theme — "atmosphere": cool sky haze instead of paper white */
+  --background: #edf1f6;   /* haze: page */
+  --foreground: #24344c;   /* body ink */
+  --muted: #5b6a82;
+  --heading: #0c2147;      /* navy ink */
   --accent: #2563eb;
-  --accent-soft: #1d4ed8; /* text links + button hover: darker on white */
+  --accent-soft: #1d4ed8;  /* text links + button hover: darker on light */
   --accent-strong: #1e3a8a;
-  --surface: #f4f7fb;
-  --surface-2: #e9eff8;
-  --border: #dbe3ee;
-  --border-strong: #c2cee0;
+  --surface: #f9fbfd;      /* cloud: cards lift off the haze */
+  --surface-2: #f1f5fa;
+  --border: #d5deea;
+  --border-strong: #bccadc;
+  --band: #e1e8f1;         /* stratus: alternating section band */
+  --bg-top: #e6edf6;
+  color-scheme: light;
 }
 
 @theme inline {
@@ -27,8 +32,57 @@
   --color-surface-2: var(--surface-2);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
+  --color-band: var(--band);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+/* Dark theme (toggle in the header). */
+[data-theme="dark"] {
+  --background: #05080f;
+  --foreground: #e7edf7;
+  --muted: #8a97b3;
+  --heading: #7db8ff;
+  --accent: #3b82f6;
+  --accent-soft: #60a5fa;
+  --accent-strong: #1d4ed8;
+  --surface: #0b1220;
+  --surface-2: #111a2e;
+  --border: #1c2740;
+  --border-strong: #2a3a5e;
+  --band: #080d18;
+  --bg-top: #0a1426;
+  color-scheme: dark;
+}
+
+/* Night-sky band: re-scope the tokens so utilities inside flip. */
+.tone-dark {
+  --background: #0a1a33;
+  --foreground: #d6e1f0;
+  --muted: #93a5c0;
+  --heading: #ffffff;
+  --accent: #3b82f6;
+  --accent-soft: #7cb2ff;
+  --accent-strong: #1d4ed8;
+  --surface: #102646;
+  --surface-2: #163156;
+  --border: #1f3a62;
+  --border-strong: #2d4d7c;
+  color: var(--foreground);
+}
+
+.band-tint {
+  background: var(--band);
+}
+
+.band-dark {
+  background:
+    radial-gradient(ellipse 70% 80% at 85% 0%, rgba(59, 130, 246, 0.22), transparent 60%),
+    var(--background);
+}
+
+.band-footer {
+  background: #071328;
 }
 
 html,
@@ -40,8 +94,8 @@ body {
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(37, 99, 235, 0.07), transparent 60%),
-    radial-gradient(ellipse 50% 40% at 90% 100%, rgba(37, 99, 235, 0.05), transparent 60%);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(37, 99, 235, 0.10), transparent 60%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--background) 40%);
   background-attachment: fixed;
 }
 

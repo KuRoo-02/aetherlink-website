@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS, SITE } from "@/lib/site";
+import { ThemeToggle } from "./theme-toggle";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -14,7 +15,7 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-surface/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2 group">
           <Image
@@ -62,12 +63,15 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <Link
-          href="/contact"
-          className="hidden md:inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent-soft transition-colors"
-        >
-          Get in touch
-        </Link>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <Link
+            href="/contact"
+            className="hidden md:inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent-soft transition-colors"
+          >
+            Get in touch
+          </Link>
+        </div>
       </div>
     </header>
   );
