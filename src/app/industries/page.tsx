@@ -35,11 +35,11 @@ export default function IndustriesPage() {
                     alt={i.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="h-full w-full object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-90"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/85 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
                   <Icon
-                    className="absolute bottom-5 left-5 h-8 w-8 text-accent-soft"
+                    className="absolute bottom-5 left-5 h-8 w-8 text-white"
                     strokeWidth={1.5}
                   />
                 </div>

@@ -7,7 +7,7 @@ import { WhatWeDoRoad } from "@/components/what-we-do-road";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { INDUSTRIES } from "@/lib/industries";
-import { AVIATION_SERVICES } from "@/lib/aviation";
+import { AVIATION_CAPABILITIES, AVIATION_PARTNERS } from "@/lib/aviation";
 
 export default function HomePage() {
   return (
@@ -20,9 +20,9 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="absolute inset-0 h-full w-full object-cover opacity-35"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60 md:to-background/10" />
         <HeroOrbit />
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-24 pb-28 md:pt-32 md:pb-36">
           <Eyebrow>{SITE.fullName}</Eyebrow>
@@ -90,7 +90,7 @@ export default function HomePage() {
               },
               {
                 title: "Aviation",
-                body: "Consultancy, asset acquisition and parts trading.",
+                body: "Consultancy, maintenance, parts trading and teardown.",
                 href: "/aviation",
               },
             ].map((p) =>
@@ -204,7 +204,7 @@ export default function HomePage() {
             alt="Widebody airframe cut into sections on the apron"
             fill
             sizes="100vw"
-            className="absolute inset-0 h-full w-full object-cover opacity-35"
+            className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/90 to-surface/30" />
           <div className="relative p-10 md:p-14">
@@ -213,18 +213,39 @@ export default function HomePage() {
               Aviation Expertise. Asset Solutions. Global Reach.
             </h2>
             <ul className="mt-8 grid max-w-2xl gap-x-8 gap-y-2 sm:grid-cols-2">
-              {AVIATION_SERVICES.map((s) => (
+              {AVIATION_CAPABILITIES.map((s) => (
                 <li key={s.slug} className="text-sm text-foreground/85">
                   {s.title}
                 </li>
               ))}
             </ul>
-            <Link
-              href="/aviation"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white hover:bg-accent-soft transition-colors glow-blue"
-            >
-              Explore Aviation <ArrowRight className="h-4 w-4" />
-            </Link>
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Link
+                href="/aviation"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white hover:bg-accent-soft transition-colors glow-blue"
+              >
+                Explore Aviation <ArrowRight className="h-4 w-4" />
+              </Link>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-xs uppercase tracking-[0.18em] text-muted">
+                  Partners
+                </span>
+                {AVIATION_PARTNERS.map((p) => (
+                  <span
+                    key={p.name}
+                    className="flex h-12 items-center rounded-lg border border-border bg-white px-3"
+                  >
+                    <Image
+                      src={p.logo}
+                      alt={p.name}
+                      width={p.logoWidth}
+                      height={p.logoHeight}
+                      className="h-8 w-auto object-contain"
+                    />
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </Section>
@@ -299,11 +320,11 @@ export default function HomePage() {
                     alt={i.imageAlt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="h-full w-full object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-90"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
                   <Icon
-                    className="absolute bottom-4 left-4 h-7 w-7 text-accent-soft"
+                    className="absolute bottom-4 left-4 h-7 w-7 text-white"
                     strokeWidth={1.5}
                   />
                 </div>

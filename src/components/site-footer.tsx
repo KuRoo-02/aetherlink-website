@@ -5,7 +5,7 @@ import { Mail, Phone } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/60 bg-background/80">
+    <footer className="border-t border-border/60 bg-surface">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2">

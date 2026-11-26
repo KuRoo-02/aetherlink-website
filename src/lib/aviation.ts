@@ -1,12 +1,13 @@
 import {
   FileSearch,
-  PlaneTakeoff,
-  PackageSearch,
   Wrench,
+  PaintRoller,
+  PackageSearch,
   Recycle,
-  Award,
+  Handshake,
   Globe2,
-  Lightbulb,
+  Layers,
+  ShieldCheck,
   Tags,
   Scissors,
   Package,
@@ -14,76 +15,192 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-export type AviationService = {
+/* ------------------------------------------------------------------ */
+/* Capabilities — grouped along the aircraft lifecycle.                */
+/* Delivered by Aetherlink together with its aviation partners.        */
+/* ------------------------------------------------------------------ */
+
+export type AviationCapability = {
   slug: string;
+  stage: string;
   title: string;
   short: string;
+  items: string[];
   icon: LucideIcon;
   image: string;
   imageAlt: string;
 };
 
-export const AVIATION_SERVICES: AviationService[] = [
+export const AVIATION_CAPABILITIES: AviationCapability[] = [
   {
-    slug: "aviation-consultancy",
-    title: "Aviation Consultancy",
+    slug: "advisory-acquisition",
+    stage: "Acquire",
+    title: "Advisory & Asset Acquisition",
     short:
-      "Independent technical consultancy for aircraft acquisition, acceptance, CAMO and continuing-airworthiness support, maintenance programmes, MRO coordination, and regulatory compliance.",
+      "Independent technical consultancy and transaction support for aircraft, engines, APUs and landing gear.",
+    items: [
+      "Aircraft, engine, APU and landing gear acquisition",
+      "Pre-purchase inspection (PPI) and records review",
+      "Aircraft acceptance, redelivery and lease management support",
+      "CAMO, continuing airworthiness and regulatory compliance",
+      "Maintenance programme and technical documentation (AMO/CAMO manuals)",
+    ],
     icon: FileSearch,
-    image: "/images/aviation/service-consultancy.webp",
-    imageAlt: "Wing-mounted engine with cowlings open for technical inspection",
-  },
-  {
-    slug: "asset-acquisition",
-    title: "Aircraft, Engine, APU and Landing Gear Acquisition",
-    short:
-      "We source and support the acquisition of aircraft, engines, APUs, and landing gear—combining technical due diligence with commercial insight and transactional support.",
-    icon: PlaneTakeoff,
     image: "/images/aviation/service-asset-acquisition.webp",
     imageAlt: "Aircraft engine, APU and landing gear staged on stands in a hangar",
   },
   {
-    slug: "components-parts-trading",
-    title: "Components and Parts Trading",
+    slug: "maintenance-engineering",
+    stage: "Maintain",
+    title: "Maintenance & Engineering",
     short:
-      "Reliable sourcing and supply of aircraft components, parts, and consumables—backed by traceability, airworthiness documentation, and responsive service.",
+      "Base and line maintenance from narrow body to wide body, backed by licensed engineers and in-house NDT.",
+    items: [
+      "Airframe heavy maintenance — C-, D- and phase checks, bridging checks",
+      "Line maintenance — transit, daily and weekly checks, defect rectification",
+      "Engine, APU and landing gear change; AOG recovery",
+      "B1/B2 licensed engineer secondment",
+      "Borescope and non-destructive testing (NDT)",
+      "Fleet technical management — planning, maintenance control, reliability",
+    ],
+    icon: Wrench,
+    image: "/images/aviation/service-consultancy.webp",
+    imageAlt: "Wing-mounted engine with cowlings open for technical inspection",
+  },
+  {
+    slug: "modification-refurbishment",
+    stage: "Upgrade",
+    title: "Modification, Cabin & Paint",
+    short:
+      "Cabin, interior and structural modifications, refurbishment and full aircraft painting.",
+    items: [
+      "Minor and major modifications, including VVIP configurations",
+      "Cabin interior upgrades and seat refurbishment",
+      "Paint stripping, repaint and custom livery",
+      "Flight control painting and balancing",
+      "Simulator, mock-up and R&D component builds",
+    ],
+    icon: PaintRoller,
+    image: "/images/aviation/cabin-interior.webp",
+    imageAlt: "Narrowbody aircraft cabin with rows of economy seats",
+  },
+  {
+    slug: "components-parts-trading",
+    stage: "Supply",
+    title: "Components & Parts Trading",
+    short:
+      "Sourcing and supply of OEM and serviceable used parts, with full traceability and airworthiness documentation.",
+    items: [
+      "Engines, APUs and landing gear",
+      "Wheels, brakes, avionics and interiors",
+      "ATR 42/72, A320 family and B737NG components",
+      "Consumables and AOG parts support",
+      "Short- and long-term spare parts storage",
+    ],
     icon: PackageSearch,
     image: "/images/aviation/service-parts-trading.webp",
     imageAlt: "Aircraft components and parts arranged on pallets in a warehouse",
   },
   {
     slug: "teardown-asset-recovery",
-    title: "Aircraft Teardown & Asset Recovery",
+    stage: "Retire",
+    title: "Teardown, Part-Out & Storage",
     short:
       "End-of-life aircraft and engines turned into recoverable value — from first panel off to last crate shipped.",
-    icon: Wrench,
+    items: [
+      "Aircraft and engine disassembly and part-out",
+      "Airframe disposal and material recycling",
+      "Packaging, crating, warehousing and logistics",
+      "Aircraft parking and storage programmes",
+      "On-site teardown at the customer's location",
+    ],
+    icon: Recycle,
     image: "/images/aviation/service-teardown.webp",
     imageAlt: "Technicians stripping insulation inside an aircraft fuselage during teardown",
   },
 ];
 
-export const AVIATION_STRENGTHS = [
+/* ------------------------------------------------------------------ */
+/* Partners                                                            */
+/* ------------------------------------------------------------------ */
+
+export type AviationPartner = {
+  name: string;
+  location: string;
+  logo: string;
+  logoWidth: number;
+  logoHeight: number;
+  url: string;
+  focus: string;
+  tags: string[];
+};
+
+export const AVIATION_PARTNERS: AviationPartner[] = [
   {
-    icon: Recycle,
-    title: "Sustainability first",
-    body: "Every retired airframe is treated as a resource. We maximise reuse of serviceable parts and recycle what remains, keeping waste out of landfill.",
+    name: "Asia AeroTechnic",
+    location: "Subang, Malaysia",
+    logo: "/images/partners/asia-aerotechnic.webp",
+    logoWidth: 177,
+    logoHeight: 128,
+    url: "https://asiaaerotechnics.com/",
+    focus:
+      "Base and line maintenance for narrow body to wide body aircraft — heavy checks, painting, modifications and fleet technical management.",
+    tags: ["Heavy maintenance", "Line maintenance", "Painting", "Modifications"],
   },
   {
-    icon: Award,
-    title: "Hands-on aviation expertise",
-    body: "Our team brings direct experience in teardown, asset recovery and airside operations within regulated airport environments.",
+    name: "PT. Akasa Aero Mandiri",
+    location: "West Java, Indonesia",
+    logo: "/images/partners/akasa-aero-mandiri.webp",
+    logoWidth: 316,
+    logoHeight: 199,
+    url: "https://akasaaeromandiri.com/",
+    focus:
+      "Aircraft end-of-life specialist — disassembly and part-out, airframe recycling, component storage, logistics and parts supply.",
+    tags: ["Teardown & part-out", "Storage", "Logistics", "Parts supply"],
+  },
+  {
+    name: "Tiger Aerotech",
+    location: "Indonesia",
+    logo: "/images/partners/tiger-aerotech.webp",
+    logoWidth: 579,
+    logoHeight: 150,
+    url: "https://tiger-aerotech.com/",
+    focus:
+      "Licensed B1/B2 engineer support, pre-purchase inspections, borescope and NDT, technical documentation and parts trading.",
+    tags: ["Licensed engineers", "PPI", "NDT", "Parts trading"],
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/* Why work with us                                                    */
+/* ------------------------------------------------------------------ */
+
+export const AVIATION_STRENGTHS = [
+  {
+    icon: Handshake,
+    title: "One accountable partner",
+    body: "A single point of contact for consultancy, maintenance, parts and teardown — we coordinate the right specialists behind the scenes.",
+  },
+  {
+    icon: Layers,
+    title: "The full asset lifecycle",
+    body: "From pre-purchase inspection and acquisition through maintenance and upgrades to end-of-life recovery, without changing provider.",
   },
   {
     icon: Globe2,
-    title: "Connected to the industry",
-    body: "Working relationships with airlines, lessors, MROs and parts traders help recovered assets find their next home quickly.",
+    title: "Regional reach",
+    body: "Partner facilities and engineering teams across Malaysia and Indonesia, with on-site support where and when it is needed.",
   },
   {
-    icon: Lightbulb,
-    title: "Better process, every project",
-    body: "We keep refining our methods and tooling to make each teardown safer, cleaner and faster than the last.",
+    icon: ShieldCheck,
+    title: "Traceable and sustainable",
+    body: "Every part tagged, documented and traceable. Retired airframes are treated as resources — reused first, recycled after.",
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/* Teardown process                                                    */
+/* ------------------------------------------------------------------ */
 
 export type TeardownStep = {
   step: string;
@@ -114,9 +231,9 @@ export const TEARDOWN_STEPS: TeardownStep[] = [
     title: "Airframe Dismantling",
     body: "Once components are out, the airframe is cut down in a controlled way and materials are separated for recycling.",
     points: [
-      "Cold cutting to avoid hot spots",
+      "Wire-saw cold cutting to avoid hot spots",
       "No mixing of material streams",
-      "Sorted for maximum recovery",
+      "Up to 92% of aircraft weight recovered",
     ],
     icon: Scissors,
     image: "/images/aviation/teardown-airframe-sections.webp",
@@ -128,7 +245,7 @@ export const TEARDOWN_STEPS: TeardownStep[] = [
     body: "Recovered parts are protected for storage and transport — wrapped individually and crated to size where needed.",
     points: [
       "Individually wrapped and tagged",
-      "Custom treated wooden crates",
+      "Custom in-house treated wooden crates",
       "Landing gear, flight controls, radomes",
     ],
     icon: Package,

@@ -13,6 +13,21 @@ export const SITE = {
   email: "admin@aetherlink-global.com",
 };
 
+/*
+ * Oil & gas supply license. General condition 13 of the license forbids
+ * using the PETRONAS logo/marks and allows the relationship to be stated
+ * only as "[Company] is licensed by PETRONAS [No. license], under Act 3
+ * Petroleum Act 1974." — keep `statement` in that exact form.
+ */
+export const LICENSE = {
+  statement:
+    "Aetherlink Global Sdn. Bhd. is licensed by PETRONAS (License No. 202601012079), under Act 3 Petroleum Act 1974.",
+  number: "202601012079",
+  period: "23.10.2026 – 22.10.2029",
+  scope:
+    "Supply of products and services to exploration and oil/gas companies in Malaysia.",
+};
+
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },

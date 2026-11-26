@@ -200,7 +200,7 @@ export function WhatWeDoRoad() {
                 />
                 <path
                   d={ROAD_D}
-                  stroke="rgba(125,184,255,0.55)"
+                  stroke="rgba(37,99,235,0.45)"
                   strokeWidth={2}
                   strokeDasharray="14 16"
                   fill="none"

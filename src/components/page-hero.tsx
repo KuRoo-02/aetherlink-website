@@ -25,11 +25,11 @@ export function PageHero({
           alt={imageAlt}
           fill
           sizes="100vw"
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       )}
       {imageSrc && (
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60 md:to-background/15" />
       )}
       <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28">
