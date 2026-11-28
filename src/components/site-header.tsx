@@ -17,17 +17,17 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-surface/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/images/logo/aetherlink-mark.png"
             alt=""
             width={186}
             height={98}
             priority
-            className="h-8 w-11 object-contain transition-opacity group-hover:opacity-90"
+            className="h-11 w-auto object-contain transition-opacity group-hover:opacity-90 md:h-12"
           />
           <span className="flex flex-col leading-none">
-            <span className="text-base font-semibold tracking-tight">
+            <span className="text-lg font-semibold tracking-tight">
               {SITE.brand}
             </span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted">

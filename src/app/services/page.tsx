@@ -1,8 +1,8 @@
 import { PageHero } from "@/components/page-hero";
 import { Section, Eyebrow } from "@/components/section";
-import { SERVICES } from "@/lib/services";
+import { SERVICES, FIELD_PROJECTS } from "@/lib/services";
 import { AVIATION_CAPABILITIES } from "@/lib/aviation";
-import { ArrowRight, BadgeCheck, Satellite, Network, Radio } from "lucide-react";
+import { ArrowRight, BadgeCheck, Satellite, Network, Radio, MapPin, CalendarDays, Check } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { LICENSE } from "@/lib/site";
@@ -55,6 +55,67 @@ export default function ServicesPage() {
               </article>
             );
           })}
+        </div>
+
+        {/* Past IT / telco projects */}
+        <div id="projects" className="mt-20 scroll-mt-20">
+          <Eyebrow>Past projects</Eyebrow>
+          <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+            Recent IT and connectivity work in the field.
+          </h2>
+          <div className="mt-10 space-y-6">
+            {FIELD_PROJECTS.map((p) => (
+              <article
+                key={p.slug}
+                className="grid gap-8 overflow-hidden rounded-3xl border border-border bg-surface p-6 md:p-8 lg:grid-cols-5"
+              >
+                <div className="flex flex-col lg:col-span-2">
+                  <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs uppercase tracking-wider text-muted">
+                    <span className="inline-flex items-center gap-1.5">
+                      <MapPin className="h-3.5 w-3.5" strokeWidth={1.75} />
+                      {p.location}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <CalendarDays className="h-3.5 w-3.5" strokeWidth={1.75} />
+                      {p.date}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-2xl font-semibold">{p.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/85">
+                    {p.summary}
+                  </p>
+                  <ul className="mt-6 space-y-2 border-t border-border pt-6">
+                    {p.scope.map((it) => (
+                      <li key={it} className="flex items-start gap-2 text-sm text-foreground/85">
+                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" strokeWidth={2.5} />
+                        {it}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:grid-rows-2 lg:col-span-3">
+                  {p.photos.map((ph, i) => (
+                    <figure
+                      key={ph.src}
+                      className={`relative overflow-hidden rounded-xl bg-surface-2 ${
+                        i === 0
+                          ? "col-span-2 aspect-[4/3] sm:row-span-2 sm:aspect-auto"
+                          : "aspect-[4/3]"
+                      }`}
+                    >
+                      <Image
+                        src={ph.src}
+                        alt={ph.alt}
+                        fill
+                        sizes={i === 0 ? "(max-width: 1024px) 100vw, 30vw" : "(max-width: 640px) 50vw, 15vw"}
+                        className="h-full w-full object-cover"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
 
         {/* Oil & gas licensing — wording follows the licence's general

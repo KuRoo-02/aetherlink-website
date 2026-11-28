@@ -9,6 +9,8 @@ import {
   AVIATION_STRENGTHS,
   TEARDOWN_STEPS,
   TEARDOWN_GALLERY,
+  HANGAR_GALLERY,
+  HANGAR,
 } from "@/lib/aviation";
 
 export const metadata = {
@@ -340,8 +342,49 @@ export default function AviationPage() {
         </div>
       </Section>
 
+      {/* HANGAR */}
+      <Section id="hangar" className="scroll-mt-20" tone="tint">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <Eyebrow>Hangar facility</Eyebrow>
+            <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+              Under cover for maintenance and teardown work.
+            </h2>
+          </div>
+          <div className="max-w-md">
+            <p className="text-foreground/85">
+              Aircraft are brought into the hangar for inspection, engine work
+              and component removal, so programmes stay on schedule whatever
+              the weather.
+            </p>
+            <p className="mt-3 flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted">
+              <MapPin className="h-3.5 w-3.5" strokeWidth={1.75} />
+              {HANGAR.location}
+            </p>
+          </div>
+        </div>
+        <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-5">
+          {HANGAR_GALLERY.map((g) => (
+            <figure
+              key={g.src}
+              className={`group relative h-64 overflow-hidden rounded-2xl border border-border bg-surface md:h-96 ${
+                g.main ? "col-span-2" : "last:col-span-2 lg:last:col-span-1"
+              }`}
+            >
+              <Image
+                src={g.src}
+                alt={g.alt}
+                fill
+                sizes={g.main ? "(max-width: 1024px) 100vw, 40vw" : "(max-width: 1024px) 50vw, 20vw"}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+            </figure>
+          ))}
+        </div>
+      </Section>
+
       {/* GALLERY */}
-      <Section tone="tint">
+      <Section>
         <Eyebrow>From the field</Eyebrow>
         <h2 className="max-w-2xl text-3xl font-semibold md:text-4xl">
           Teardown projects in progress.

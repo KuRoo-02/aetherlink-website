@@ -262,8 +262,8 @@ export const TEARDOWN_STEPS: TeardownStep[] = [
       "Customs and shipment handling",
     ],
     icon: Warehouse,
-    image: "/images/aviation/aircraft-storage-737.webp",
-    imageAlt: "Boeing 737-800 parked beside the hangar awaiting part-out",
+    image: "/images/aviation/teardown-747-wing-transport.webp",
+    imageAlt: "Crane loading a removed Boeing 747 wing onto a flatbed trailer for transport",
   },
 ];
 
@@ -289,9 +289,32 @@ export const TEARDOWN_GALLERY = [
     tall: true,
   },
   {
-    src: "/images/aviation/aircraft-storage-a319.webp",
-    alt: "Airbus narrowbody parked with engine covers fitted",
+    src: "/images/aviation/teardown-fuselage-cabin-view.webp",
+    alt: "View through an opened fuselage towards a separated Boeing 737 section on site",
     tall: true,
+  },
+];
+
+export const HANGAR_GALLERY = [
+  {
+    src: "/images/aviation/hangar-exterior.webp",
+    alt: "Wide view of the aircraft hangar and apron",
+    main: true,
+  },
+  {
+    src: "/images/aviation/hangar-aircraft-entry.webp",
+    alt: "Narrowbody aircraft positioned at the hangar entrance",
+    main: false,
+  },
+  {
+    src: "/images/aviation/hangar-engine.webp",
+    alt: "Turbofan engine with cowlings open for inspection",
+    main: false,
+  },
+  {
+    src: "/images/aviation/hangar-fuselage-section.webp",
+    alt: "Fuselage section opened up for component removal inside the hangar",
+    main: false,
   },
 ];
 

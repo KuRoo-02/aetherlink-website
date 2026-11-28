@@ -73,3 +73,57 @@ export const SERVICES: Service[] = [
     icon: Wrench,
   },
 ];
+
+/* Past IT / telco field projects (photos supplied by the client). */
+export type FieldProject = {
+  slug: string;
+  title: string;
+  location: string;
+  date: string;
+  summary: string;
+  scope: string[];
+  photos: { src: string; alt: string }[];
+};
+
+export const FIELD_PROJECTS: FieldProject[] = [
+  {
+    slug: "quarry-satellite",
+    title: "Satellite connectivity for a quarry operation",
+    location: "Perak",
+    date: "November 2026",
+    summary:
+      "Satellite broadband terminals installed across an active quarry site — on the processing plant, conveyor walkways and site buildings — to bring reliable connectivity to a remote operation.",
+    scope: [
+      "Site survey and terminal placement",
+      "Pole and wall mounting, cabling",
+      "Commissioning and handover",
+    ],
+    photos: [
+      { src: "/images/projects/quarry-1.webp", alt: "Satellite terminal on a pole beside conveyor structures at a quarry" },
+      { src: "/images/projects/quarry-2.webp", alt: "Satellite terminal mounted above the processing plant roof" },
+      { src: "/images/projects/quarry-3.webp", alt: "Satellite terminal on a walkway railing overlooking an aggregate stockpile" },
+      { src: "/images/projects/quarry-4.webp", alt: "Satellite terminal on a pole against the sky" },
+      { src: "/images/projects/quarry-5.webp", alt: "Satellite terminal wall-mounted under a building eave" },
+    ],
+  },
+  {
+    slug: "vessel-cctv",
+    title: "CCTV and connectivity for marine vessels",
+    location: "Kemaman, Terengganu",
+    date: "October 2026",
+    summary:
+      "Marine-grade CCTV cameras, antenna masts and a satellite terminal fitted on board vessels at the jetty, giving operators remote visibility and connectivity on deck.",
+    scope: [
+      "Camera and antenna mast installation",
+      "Satellite terminal on the upper deck",
+      "Configuration and testing alongside",
+    ],
+    photos: [
+      { src: "/images/projects/vessel-1.webp", alt: "Offshore support vessel moored at the jetty" },
+      { src: "/images/projects/vessel-2.webp", alt: "Antenna mast and PTZ camera installed on the vessel's upper deck" },
+      { src: "/images/projects/vessel-3.webp", alt: "Satellite terminal on a mast above the vessel's deck" },
+      { src: "/images/projects/vessel-4.webp", alt: "Marine CCTV camera installed on the vessel railing" },
+      { src: "/images/projects/vessel-5.webp", alt: "Second marine CCTV camera covering the deck" },
+    ],
+  },
+];

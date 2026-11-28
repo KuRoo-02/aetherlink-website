@@ -14,9 +14,9 @@ export function SiteFooter() {
               alt=""
               width={186}
               height={98}
-              className="h-7 w-10 object-contain"
+              className="h-12 w-auto object-contain"
             />
-            <span className="text-base font-semibold">{SITE.brand}</span>
+            <span className="text-lg font-semibold">{SITE.brand}</span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-muted">
             Telecommunications and infrastructure solutions for mission-critical operations.
@@ -45,7 +45,6 @@ export function SiteFooter() {
             Contact
           </h3>
           <ul className="mt-3 space-y-3 text-sm text-foreground/85">
-            <li className="text-xs leading-relaxed">{SITE.address}</li>
             <li>
               <a
                 href={`mailto:${SITE.email}`}

@@ -3,7 +3,7 @@ import { Section, Eyebrow } from "@/components/section";
 import { SITE } from "@/lib/site";
 import { HANGAR } from "@/lib/aviation";
 import { EnquiryForm } from "@/components/enquiry-form";
-import { MapPin, Phone, Hash, Mail, Plane } from "lucide-react";
+import { Phone, Hash, Mail, Plane } from "lucide-react";
 
 export const metadata = {
   title: "Get in Touch — Aetherlink Global",
@@ -27,13 +27,6 @@ export default function ContactPage() {
             <Eyebrow>Company</Eyebrow>
             <h2 className="text-2xl font-semibold">{SITE.fullName}</h2>
             <div className="mt-6 space-y-5">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-wider text-muted">Office</p>
-                  <p className="mt-1 text-sm text-foreground leading-relaxed">{SITE.address}</p>
-                </div>
-              </div>
               <div className="flex items-start gap-3">
                 <Plane className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
                 <div>
